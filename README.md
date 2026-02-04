@@ -1,2 +1,4 @@
-# ephemeral
-Session only chatbot using Together.ai
+# Ephemeral
+## Leave no trace
+
+Private, secure, memory only AI inference using near state-of-the-art open source models provided by Together.ai.
