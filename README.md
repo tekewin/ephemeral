@@ -46,7 +46,7 @@ $env:TOGETHER_API_KEY="your-api-key-here"
 ```
 
 ### 3. Install Dependencies
-Ensure you have Python installed, then install the required packages:
+Ensure you have Python installed (I recommend a [python virtual environment](https://docs.python.org/3/library/venv.html)), then install the required packages:
 
 ```bash
 pip install -r requirements.txt
