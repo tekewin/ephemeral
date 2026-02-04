@@ -67,7 +67,7 @@ The app will automatically open in your default web browser (usually at `http://
 ## Usage Guide
 
 ### Chat & Image Handling
-* **Standard Chat:** Type your message in the chat input to interact with the default text model.
+* **Standard Chat:** Type your message in the chat input to interact with the default text model **Kimi-K2-Thinking**.
 * **Image Uploads:** Drag and drop an image into the sidebar or upload area.
     * **Automatic Model Switching:** When an image is detected, Ephemeral automatically switches the active model to **Kimi-K2**. This specialized vision model is capable of analyzing the visual content and answering questions about your image.
 
@@ -75,5 +75,5 @@ The app will automatically open in your default web browser (usually at `http://
 * **Thinking Text Area:** For models that support Chain of Thought or reasoning steps, a specialized "Thinking" expander or text area will appear. Click this to view the raw reasoning process the model used to arrive at its final answer.
 
 ### Configuration
-* **Default Output Token Limit:** The application is configured with a default output token limit (typically **512 tokens**) to ensure concise and fast responses.
-* You can adjust this limit in the application sidebar if you require longer, more detailed responses (e.g., for creative writing or complex code generation).
+* **Default Output Token Limit:** The application is configured with a default output token limit of 128,000. It can be modified in the app.py script.
+
