@@ -78,7 +78,7 @@ The app will automatically open in your default web browser (usually at `http://
 ### Configuration
 * **Default Output Token Limit:** The application is configured with a default output token limit of 128,000. It can be modified in the app.py script.
 
-## Test script
+## Test script for Together.ai
 
 The **test_together.py** script can be used to test your API key configuration before running the app, or to help troubleshoot connection issues. To use it, first export your API key, then run the script to see if you get back an answer to the question "What is your knowledge cutoff date?".
 
