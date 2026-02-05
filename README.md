@@ -23,8 +23,9 @@ Follow these steps to get Ephemeral running on your local machine.
 
 ### 1. Set up Together AI
 1.  Go to [together.ai](https://together.ai) and sign up for an account.
-2.  Navigate to your **Settings** > **API Keys**.
-3.  Click **Create API Key** to generate a new key. Copy this string; you will need it for the next step.
+2.  Go to Settings. Set "Store prompts and model responses and allow them to be used for product improvements." to NO. "Set Allow my data to be used for training models released by Together AI and partners." to NO. These are important to enable the Zero Data Retention policy.
+4.  Navigate to your **Settings** > **API Keys**.
+5.  Click **Create API Key** to generate a new key. Copy this string; you will need it for the next step.
 
 ### 2. Configure Your Environment
 You need to set your API key as an environment variable so Ephemeral can authenticate with the service.
