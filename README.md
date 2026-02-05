@@ -5,7 +5,7 @@
 
 **Ephemeral** is a private, secure, and open-source web application for chatting with advanced AI models. It is designed to be lightweight and privacy-focused, ensuring your interactions remain within your control.
 
-The application integrates seamlessly with **Together AI** to provide access to top-tier open-source models, featuring automatic multi-modal support.
+The application integrates seamlessly with **Together AI** to provide access to top-tier open-source models, featuring automatic multi-modal support, and Zero Data Retention.
 
 ## Features
 
