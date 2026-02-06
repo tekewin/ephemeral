@@ -9,7 +9,8 @@ The application integrates seamlessly with **Together AI** to provide access to 
 
 ## Features
 
-* **Private & Secure:** Built with privacy in mind. All API calls go through api.together.ai which is HTTPS-only. Your prompts and responses are encrypted in transit.
+* **Private:** Built with privacy in mind. Uses Zero Data Retention at together.ai and logs no information anywhere local or remote. When the session is over, the chat is gone forever.
+* **Secure:** All API calls go through api.together.ai which is HTTPS-only. Your prompts and responses are encrypted in transit.
 * **Open Source Models:** Chat with the latest open-source LLMs via the Together AI API.
 * **Multi-Modal Support:** Automatically detects image uploads and switches to the **Kimi-K2** vision model to analyze and discuss your images.
 * **Transparency:** View the model's "thinking" process in a dedicated text area.
