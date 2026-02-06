@@ -57,10 +57,8 @@ pip install -r requirements.txt
 Run the application from your command line:
 
 ```bash
-streamlit run app.py
+python3 streamlit run app.py
 ```
-*Note: If your main file is named differently (e.g., `main.py` or `ephemeral.py`), adjust the command accordingly.*
-
 The app will automatically open in your default web browser (usually at `http://localhost:8501`).
 
 ---
