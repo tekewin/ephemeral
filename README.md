@@ -14,7 +14,6 @@ The application integrates seamlessly with **Together AI** to provide access to 
 * **Open Source Models:** Chat with the latest open-source LLMs via the Together AI API.
 * **Multi-Modal Support:** Automatically detects image uploads and switches to the **Kimi-K2** vision model to analyze and discuss your images.
 * **Transparency:** View the model's "thinking" process in a dedicated text area.
-* **Customizable:** Adjustable token limits and settings.
 
 ---
 
