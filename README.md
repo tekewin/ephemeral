@@ -77,6 +77,8 @@ The app will automatically open in your default web browser (usually at `http://
 ### Configuration
 * **Default Output Token Limit:** The application is configured with a default output token limit of 128,000. It can be modified in the app.py script.
 
+![flowchart](/ephemeral-flow.png)
+
 ## Specifications for Kimi-K2.5
 
 **Architecture:** Mixture-of-Experts (MoE)
