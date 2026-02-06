@@ -1,5 +1,4 @@
 # Ephemeral
-### Zero trace inference
 
 ![banner](/ephemeral-banner.png)
 
