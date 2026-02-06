@@ -1,7 +1,7 @@
 # Ephemeral
 ### Zero trace inference
 
-![Alt text](/ephemeral-banner.png)
+![banner](/ephemeral-banner.png)
 
 **Ephemeral** is a private, secure, and open-source web application for chatting with advanced AI models. It is designed to be lightweight and privacy-focused, ensuring your interactions remain within your control.
 
@@ -23,7 +23,8 @@ Follow these steps to get Ephemeral running on your local machine.
 
 ### 1. Set up Together AI
 1.  Go to [together.ai](https://together.ai) and sign up for an account.
-2.  Navigate to **Settings**, scroll to **Privacy & Security**. Set "Store prompts and model responses..." to NO. "Set Allow my data to be used for training models..." to NO. These settings enable the Zero Data Retention policy.
+2.  Navigate to **Settings**, scroll to **Privacy & Security**. Set "Store prompts and model responses..." to NO. Set "Allow my data to be used for training models..." to NO. These settings enable the Zero Data Retention policy.
+![privacy-settings](/privacy-settings.png)
 4.  Navigate to your **Settings** > **API Keys**.
 5.  Click **Create API Key** to generate a new key. Copy this string; you will need it for the next step.
 
