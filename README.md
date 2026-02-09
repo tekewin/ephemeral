@@ -48,7 +48,7 @@ TOGETHER_API_KEY=your-api-key-here
 Ensure you have Python installed (I recommend a [python virtual environment](https://docs.python.org/3/library/venv.html)), then install the required packages:
 
 ```bash
-./activate_env.sh
+pip install -r requirements.txt
 ```
 
 ### 4. Launch the Application
