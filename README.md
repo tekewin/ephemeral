@@ -30,36 +30,32 @@ Follow these steps to get Ephemeral running on your local machine.
 4.  Click **Create API Key** to generate a new key. Copy this string; you will need it for the next step. Note the "user key" is not the same as an API key.
 
 ### 2. Configure Your Environment
-You need to set your API key as an environment variable so Ephemeral can authenticate with the service.
+Create a local `.env` file so Ephemeral can authenticate with Together AI:
 
-**Mac/Linux:**
-Open your terminal and run:
 ```bash
-export TOGETHER_API_KEY="your-api-key-here"
+cp .env_example .env
 ```
 
-**Windows (Command Prompt):**
-```cmd
-set TOGETHER_API_KEY=your-api-key-here
+Then edit `.env` and set:
+
+```env
+TOGETHER_API_KEY=your-api-key-here
 ```
 
-**Windows (PowerShell):**
-```powershell
-$env:TOGETHER_API_KEY="your-api-key-here"
-```
+`.env` is ignored by git and must be set up manually by each user.
 
 ### 3. Install Dependencies
 Ensure you have Python installed (I recommend a [python virtual environment](https://docs.python.org/3/library/venv.html)), then install the required packages:
 
 ```bash
-pip install -r requirements.txt
+./activate_env.sh
 ```
 
 ### 4. Launch the Application
 Run the application from your command line:
 
 ```bash
-python3 -m streamlit run app.py
+streamlit run app.py
 ```
 The app will automatically open in your default web browser (usually at `http://localhost:8501`).
 
