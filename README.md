@@ -4,14 +4,14 @@
 
 **Ephemeral** is a private, secure, and open-source web application for chatting with advanced AI models. It is designed to be lightweight and privacy-focused, ensuring your interactions remain within your control.
 
-The application integrates seamlessly with **Together AI** to provide access to top-tier open-source models, featuring automatic multi-modal support, and Zero Data Retention.
+The application integrates seamlessly with **Together AI** to provide access to top-tier open-source models, featuring advanced reasoning capabilities, and Zero Data Retention.
 
 ## Features
 
 * **Private:** Built with privacy in mind. Uses Zero Data Retention at together.ai and logs no information anywhere. When the session is over, the chat is gone forever.
 * **Secure:** All API calls go through api.together.ai which is HTTPS-only. Your prompts and responses are encrypted in transit.
 * **Open Source Models:** Chat with the latest open-source LLMs via the Together AI API.
-* **Multi-Modal Support:** Automatically detects image uploads and switches to the **Kimi-K2** vision model to analyze and discuss your images.
+* **Advanced Reasoning:** Ephemeral uses the **GLM-5** model, which is optimized for complex reasoning, coding, and agentic tasks.
 * **Transparency:** View the model's "thinking" process in a dedicated text area.
 
 ---
@@ -64,9 +64,8 @@ The app will automatically open in your default web browser (usually at `http://
 ## Usage Guide
 
 ### Chat & Image Handling
-* **Standard Chat:** Type your message in the chat input to interact with the default text model **Kimi-K2-Thinking**.
-* **Image Uploads:** Drag and drop an image into the sidebar or upload area.
-    * **Automatic Model Switching:** When an image is detected, Ephemeral automatically switches the active model to **Kimi-K2**. This specialized vision model is capable of analyzing the visual content and answering questions about your image.
+* **Standard Chat:** Type your message in the chat input to interact with the default text model **GLM-5**.
+* **Image Uploads:** Image uploads are currently disabled as the active model (**GLM-5**) is not a vision model.
 
 ### Thinking Process
 * **Thinking Text Area:** For models that support Chain of Thought or reasoning steps, a specialized "Thinking" expander or text area will appear. Click this to view the raw reasoning process the model used to arrive at its final answer.
@@ -74,14 +73,14 @@ The app will automatically open in your default web browser (usually at `http://
 ### Configuration
 * **Default Output Token Limit:** The application is configured with a default output token limit of 128,000. It can be modified in the app.py script.
 
-## Specifications for Kimi-K2.5
+## Specifications for GLM-5
 
-**Architecture:** Mixture-of-Experts (MoE)
+**Architecture:** Mixture-of-Experts (MoE) with DeepSeek Sparse Attention (DSA)
 
-**Total Parameters:** 1 Trillion
+**Total Parameters:** 744 Billion
 
-**Active Parameters:** 32 Billion (per token)
+**Active Parameters:** 40 Billion
 
-**Training Data:** Approx. 15 trillion mixed visual and text tokens.
+**Training Data:** Optimized for complex systems engineering and long-horizon agent workflows.
 
-**Max Context Window (Input + Output):** 256,000 tokens (often cited as 262,144 tokens in technical documentation).
+**Max Context Window (Input + Output):** 128,000+ tokens.
