@@ -73,11 +73,11 @@ The app will automatically open in your default web browser (usually at `http://
 ### Configuration
 * **Default Output Token Limit:** The application is configured with a default output token limit of 128,000. It can be modified in the app.py script.
 
-## Specifications for GLM-5
+## Specifications for GLM-5 FP4
 
 **Architecture:** Mixture-of-Experts (MoE) with DeepSeek Sparse Attention (DSA)
 
-**Total Parameters:** 744 Billion
+**Total Parameters:** 744 Billion (435.2 FP4 version)
 
 **Active Parameters:** 40 Billion
 
