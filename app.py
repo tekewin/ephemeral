@@ -128,7 +128,7 @@ if os.path.exists("ephemeral-banner.png"):
     st.image("ephemeral-banner.png", width='stretch')
 
 st.title("Ephemeral Chat")
-st.caption("Powered by zai-org/GLM-5")
+st.caption("Powered by zai-org/GLM-5.1")
 
 # Initialize Client
 # We expect TOGETHER_API_KEY in .env (preferred), env var, or Streamlit secrets.
