@@ -64,8 +64,8 @@ The app will automatically open in your default web browser (usually at `http://
 ## Usage Guide
 
 ### Chat & Image Handling
-* **Standard Chat:** Type your message in the chat input to interact with the default text model **GLM-5**.
-* **Image Uploads:** Image uploads are currently disabled as the active model (**GLM-5**) is not a vision model.
+* **Standard Chat:** Type your message in the chat input to interact with the default model **moonshotai/Kimi-K2.6**.
+* **Image Uploads:** Kimi-K2.6 is a vision model and can understand images. The app takes one image per prompt.
 
 ### Thinking Process
 * **Thinking Text Area:** For models that support Chain of Thought or reasoning steps, a specialized "Thinking" expander or text area will appear. Click this to view the raw reasoning process the model used to arrive at its final answer.
@@ -75,12 +75,12 @@ The app will automatically open in your default web browser (usually at `http://
 
 ## Specifications for GLM-5 FP4
 
-**Architecture:** Mixture-of-Experts (MoE) with DeepSeek Sparse Attention (DSA)
+**Architecture:** Mixture-of-Experts (MoE)
 
-**Total Parameters:** 744 Billion (435.2 FP4 version)
+**Total Parameters:** 1 trillion
 
-**Active Parameters:** 40 Billion
+**Active Parameters:** 32 Billion
 
 **Training Data:** Optimized for complex systems engineering and long-horizon agent workflows.
 
-**Max Context Window (Input + Output):** 128,000+ tokens.
+**Max Context Window (Input + Output):** 262,000 tokens.

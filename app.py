@@ -128,7 +128,7 @@ if os.path.exists("ephemeral-banner.png"):
     st.image("ephemeral-banner.png", width='stretch')
 
 st.title("Ephemeral Chat")
-st.caption("Powered by zai-org/GLM-5.1")
+st.caption("Powered by moonshotai/Kimi-K2.6")
 
 # Initialize Client
 # We expect TOGETHER_API_KEY in .env (preferred), env var, or Streamlit secrets.
@@ -198,9 +198,21 @@ available_tools = {
     "web_search": web_search
 }
 
-# Image Handling Helper (Disabled: GLM-5 is not a vision model)
 def process_image(uploaded_file):
-    return None
+    if uploaded_file is None:
+        return None
+    if uploaded_file.size > MAX_IMAGE_SIZE_BYTES:
+        st.warning(f"Image exceeds {MAX_IMAGE_SIZE_BYTES // (1024 * 1024)} MB limit and will not be sent.")
+        return None
+    try:
+        file_bytes = uploaded_file.read()
+        uploaded_file.seek(0)
+        mime_type = uploaded_file.type or "image/jpeg"
+        encoded = base64.b64encode(file_bytes).decode("utf-8")
+        return f"data:{mime_type};base64,{encoded}"
+    except Exception as e:
+        st.warning(f"Failed to process image: {e}")
+        return None
 
 # Sidebar
 with st.sidebar:
@@ -208,7 +220,12 @@ with st.sidebar:
         st.session_state.messages = []
         st.rerun()
 
-    st.info("Image uploads are currently disabled as the active model (GLM-5) is not a vision model.")
+    uploaded_image = st.file_uploader(
+        "Upload Image",
+        type=["png", "jpg", "jpeg", "gif", "webp"],
+        key="image_upload",
+        help="Attach an image to your next message."
+    )
 
 # Display Chat History
 for msg in st.session_state.messages:
@@ -216,7 +233,7 @@ for msg in st.session_state.messages:
     if role not in {"user", "assistant"}:
         continue
     with st.chat_message(role):
-        # Display Reasoning if present (GLM-5 may support reasoning_content)
+        # Display Reasoning if present 
         if msg.get("reasoning_content"):
             with st.expander("Thinking", expanded=False):
                 st.markdown(msg["reasoning_content"])
@@ -232,19 +249,24 @@ for msg in st.session_state.messages:
         elif content:
             st.markdown(content)
         
-        # GLM-5 might output thoughts in reasoning_content field.
 
 # Chat Input
 if prompt := st.chat_input("Send Message..."):
     # 1. User Message Construction
     user_content = [{"type": "text", "text": prompt}]
-    
+
+    image_data_url = process_image(st.session_state.get("image_upload"))
+    if image_data_url:
+        user_content.append({"type": "image_url", "image_url": {"url": image_data_url}})
+
     # Append to local state
     st.session_state.messages.append({"role": "user", "content": user_content})
-    
+
     # Render immediately
     with st.chat_message("user"):
         st.markdown(prompt)
+        if image_data_url:
+            st.image(st.session_state["image_upload"])
 
     # 2. Assistant Response Logic
     with st.chat_message("assistant"):
@@ -267,8 +289,8 @@ if prompt := st.chat_input("Send Message..."):
                 new_m["name"] = m["name"]
             loop_messages.append(new_m)
         
-        # Target model is now GLM-5 (text-only)
-        target_model = "zai-org/GLM-5"
+        # Target model
+        target_model = "moonshotai/Kimi-K2.6"
         
         # Safety/Limit for tool loops
         max_tool_iterations = MAX_TOOL_ITERATIONS
