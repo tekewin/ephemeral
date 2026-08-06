@@ -128,7 +128,7 @@ if os.path.exists("ephemeral-banner.png"):
     st.image("ephemeral-banner.png", width='stretch')
 
 st.title("Ephemeral Chat")
-st.caption("Powered by moonshotai/Kimi-K2.6")
+st.caption("Powered by moonshotai/Kimi-K3")
 
 # Initialize Client
 # We expect TOGETHER_API_KEY in .env (preferred), env var, or Streamlit secrets.
@@ -290,7 +290,7 @@ if prompt := st.chat_input("Send Message..."):
             loop_messages.append(new_m)
         
         # Target model
-        target_model = "moonshotai/Kimi-K2.6"
+        target_model = "moonshotai/Kimi-K3"
         
         # Safety/Limit for tool loops
         max_tool_iterations = MAX_TOOL_ITERATIONS
